@@ -4,7 +4,7 @@ echo $PATH
 echo " "
 echo " "
 
-export PATH="home/helauren/.MyEnv/bin:$PATH"
+export PATH="/home/helauren/.MyEnv/bin:$PATH"
 
 echo $PATH
 echo " "

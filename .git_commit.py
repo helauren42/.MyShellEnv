@@ -14,7 +14,7 @@ def runCommand(command):
 def main():
 
 	if len(sys.argv) < 2:
-		print("Usage: ./gitcom")
+		print("Usage: ./gitcom your commit message")
 		sys.exit(1)
 	
 	message = sys.argv[1]
