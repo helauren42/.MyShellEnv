@@ -9,3 +9,5 @@ alias resetDns='echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf'
 
 alias p="python3"
 
+alias vpn_torrent="sudo cyberghostvpn --connect --country-code BE --torrent"
+
