@@ -26,7 +26,7 @@ def main():
 	print(message)
 
 	os.system("git add .")
-	runCommand(f"git commit -m \"{message}\"")
+	runCommand(f"git commit -m \"{message}\" && git push")
 
 if __name__ == "__main__":
 	main()
