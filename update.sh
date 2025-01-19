@@ -18,8 +18,6 @@ gt() {
 	ga . && gc "$1" && gp
 }
 
-alias gitcom="~/.MyShellEnv/bin/gitcom"
-
 # Aliases
 
 alias reset_dns='echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf'
