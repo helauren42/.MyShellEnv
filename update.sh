@@ -25,7 +25,9 @@ alias reset_dns='echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf'
 
 alias p="python3"
 
-alias vpn_torrent="sudo cyberghostvpn --connect --country-code BE --torrent"
+alias cg="sudo cyberghostvpn --connect --country-code BE"
+alias cg_streaming="sudo cyberghostvpn --connect --country-code BE --streaming"
+alias cg_torrent="sudo cyberghostvpn --connect --country-code BE --torrent"
 
 alias set_gnome_icons="gsettings set org.gnome.desktop.interface icon-theme"
 
