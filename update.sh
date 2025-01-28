@@ -6,8 +6,16 @@ export PATH="$PATH:~/Qt/Tools/QtCreator/bin"
 
 # Command functions
 
+errnull() {
+	"$@" 2>/dev/null
+}
+
+outnull() {
+	"$@" 1>/dev/null
+}
+
 touchx() {
-	touch "$1" && chmod u+x "$1"
+	touch "$@" && chmod u+x "$@"
 }
 
 cdup() {
@@ -20,6 +28,8 @@ cdup() {
 }
 
 # alias
+
+alias rt="gio trash"
 
 alias reset_dns='echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf'
 
@@ -44,25 +54,18 @@ alias upgrade="sudo dnf upgrade -y"
 
 alias gl="git log"
 alias gd="git diff"
-alias gpull="git pull"
 alias gs="git status"
 
 alias ga="git add"
 alias gc="git commit -m"
-alias gp="git push"
+
+alias grmc="git rm --cached"
 
 gt() {
 	if [ -z $1 ]; then
 		echo $ERROR_REQUIRES_ARG
 	else
-		ga . && gc "$1" && gp
+		ga . && gc "$1" && git push
 	fi
 }
 
-grmc() {
-	if [ -z $1 ]; then
-		echo $ERROR_REQUIRES_ARG
-	else
-		git rm --cached $1
-	fi
-}
