@@ -1,4 +1,9 @@
+
 ERROR_REQUIRES_ARG="Error: requires an argument"
+
+# WELCOME
+
+date
 
 # PATHS
 export PATH="/home/helauren/.MyEnv/bin:$PATH"
@@ -6,12 +11,16 @@ export PATH="$PATH:~/Qt/Tools/QtCreator/bin"
 
 # Command functions
 
-errnull() {
+stderrnull() {
 	"$@" 2>/dev/null
 }
 
-outnull() {
+stdoutnull() {
 	"$@" 1>/dev/null
+}
+
+outnull() {
+	"$@" 2>/dev/null 1>/dev/null
 }
 
 touchx() {
@@ -29,7 +38,7 @@ cdup() {
 
 # alias
 
-alias rt="gio trash"
+alias trash="gio trash"
 
 alias reset_dns='echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf'
 
@@ -58,6 +67,8 @@ alias gs="git status"
 
 alias ga="git add"
 alias gc="git commit -m"
+
+alias gca="git commit --amend"
 
 alias grmc="git rm --cached"
 
