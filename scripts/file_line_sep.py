@@ -24,10 +24,16 @@ def addLine(lines: list[str]):
                 num = int((120 - (len(args.comment) + 2)) // 2)
                 file.write(num * '-' + f" {args.comment} " + num * '-' + '\n')
             file.write(line)
+        print(i)
+        if i == args.line -2 and args.comment == None:
+            file.write(120 * '-' + '\n')
+        elif i == args.line -2:
+            num = int((120 - (len(args.comment) + 2)) // 2)
+            file.write(num * '-' + f" {args.comment} " + num * '-' + '\n')
 
 def main():
     lines = readFile()
-    if args.line > len(lines):
+    if args.line > len(lines) +1:
         print(f"The file has {len(lines)} lines can't write to line {args.line}")
         sys.exit(1)
     addLine(lines)
