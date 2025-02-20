@@ -1,3 +1,4 @@
+# CONST
 
 ERROR_REQUIRES_ARG="Error: requires an argument"
 
@@ -10,6 +11,18 @@ export PATH="/home/helauren/.MyEnv/bin:$PATH"
 export PATH="$PATH:~/Qt/Tools/QtCreator/bin"
 
 # Command functions
+
+build_dojo_dir(){
+	python3 $HOME/.MyShellEnv/scripts/build_dojo_dir.py $@
+}
+
+process_grep(){
+	ps aux | grep $@ | grep -v "grep"
+}
+
+i2p_start(){
+	$HOME/.MyShellEnv/scripts/i2p_start.sh
+}
 
 stderrnull() {
 	"$@" 2>/dev/null
@@ -38,7 +51,7 @@ cdup() {
 
 # alias
 
-alias trash="gio trash"
+alias rm="gio trash"
 
 alias reset_dns='echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf'
 
