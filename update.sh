@@ -7,10 +7,43 @@ ERROR_REQUIRES_ARG="Error: requires an argument"
 date
 
 # PATHS
-export PATH="/home/helauren/.MyEnv/bin:$PATH"
 export PATH="$PATH:~/Qt/Tools/QtCreator/bin"
 
+# docker 
+
+alias dock_prune="docker system prune -a"
+alias dock_stop="docker stop $(docker ps -q)"
+
+# github
+
+alias gl="git log"
+alias gd="git diff"
+alias gs="git status"
+
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
+
+alias gca="git commit --amend"
+
+alias grmc="git rm --cached"
+
+alias gitsubmoduleup="git submodule update --init --recursive"
+
+gt() {
+	if [ -z $1 ]; then
+		echo $ERROR_REQUIRES_ARG
+	else
+		ga . && gc "$1" && git push
+	fi
+}
+
+
 # Command functions
+
+file_line_sep(){
+	python3 $HOME/.MyShellEnv/scripts/file_line_sep.py $@
+}
 
 build_dojo_dir(){
 	python3 $HOME/.MyShellEnv/scripts/build_dojo_dir.py $@
@@ -72,24 +105,4 @@ install() {
 alias remove="sudo dnf remove"
 alias upgrade="sudo dnf upgrade -y"
 
-# github
-
-alias gl="git log"
-alias gd="git diff"
-alias gs="git status"
-
-alias ga="git add"
-alias gc="git commit -m"
-
-alias gca="git commit --amend"
-
-alias grmc="git rm --cached"
-
-gt() {
-	if [ -z $1 ]; then
-		echo $ERROR_REQUIRES_ARG
-	else
-		ga . && gc "$1" && git push
-	fi
-}
 
