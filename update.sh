@@ -90,11 +90,10 @@ alias reset_dns='echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf'
 
 alias p="python3"
 
-alias cg="sudo cyberghostvpn --connect --country-code BE"
-alias cg_streaming="sudo cyberghostvpn --connect --country-code BE --streaming"
-alias cg_torrent="sudo cyberghostvpn --connect --country-code BE --torrent"
-
 alias set_gnome_icons="gsettings set org.gnome.desktop.interface icon-theme"
+
+alias Obsidian="nohup ~/.local/bin/Obsidian-1.8.7.AppImage &"
+alias Joplin="nohup ~/.local/bin/Joplin-3.2.12.AppImage &"
 
 # dnf
 
