@@ -89,3 +89,10 @@ alias p="python3"
 alias Obsidian="nohup ~/.local/bin/Obsidian-1.8.7.AppImage &"
 alias Joplin="nohup ~/.local/bin/Joplin-3.2.12.AppImage &"
 
+alias sozsh="source ~/.zshrc"
+alias sobash="source ~/.bashrc"
+
+# current
+
+source ~/.MyShellEnv/arch.sh
+
