@@ -41,19 +41,27 @@ gt() {
 
 # Command functions
 
-file_line_sep(){
+recpp() {
+	clear && c++ *.cpp && ./a.out
+}
+
+basegitignore() {
+	cp $HOME/.MyShellEnv/files/basegitignore ./.gitignore
+}
+
+filelinesep(){
 	python3 $HOME/.MyShellEnv/scripts/file_line_sep.py $@
 }
 
-build_dojo_dir(){
+builddojo(){
 	python3 $HOME/.MyShellEnv/scripts/build_dojo_dir.py $@
 }
 
-process_grep(){
+processgrep(){
 	ps aux | grep $@ | grep -v "grep"
 }
 
-i2p_start(){
+i2pstart(){
 	$HOME/.MyShellEnv/scripts/i2p_start.sh
 }
 
