@@ -4,12 +4,10 @@ ERROR_REQUIRES_ARG="Error: requires an argument"
 
 # WELCOME
 
-date
-
 # PATHS
 export PATH="$PATH:~/Qt/Tools/QtCreator/bin"
 
-# docker 
+# docker
 
 alias dock_prune="docker system prune -a"
 alias dock_stop="docker stop $(docker ps -q)"
@@ -94,22 +92,15 @@ cdup() {
 
 alias rm="gio trash"
 
-alias reset_dns='echo "nameserver 1.1.1.1" | sudo tee /etc/resolv.conf'
-
 alias p="python3"
-
-alias set_gnome_icons="gsettings set org.gnome.desktop.interface icon-theme"
 
 alias Obsidian="nohup ~/.local/bin/Obsidian-1.8.7.AppImage &"
 alias Joplin="nohup ~/.local/bin/Joplin-3.2.12.AppImage &"
 
-# dnf
+alias sozsh="source ~/.zshrc"
+alias sobash="source ~/.bashrc"
 
-install() {
-	sudo dnf install $1 -y
-}
+# current
 
-alias remove="sudo dnf remove"
-alias upgrade="sudo dnf upgrade -y"
-
+source ~/.MyShellEnv/arch.sh
 
