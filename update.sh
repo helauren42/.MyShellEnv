@@ -90,6 +90,10 @@ cdup() {
 
 # alias
 
+alias pymenv="python3 -m venv venv && touch requirments.txt"
+
+alias pyenv="source venv/bin/activate"
+
 alias rm="gio trash"
 
 alias p="python3"
