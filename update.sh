@@ -106,5 +106,5 @@ alias sobash="source ~/.bashrc"
 
 # current
 
-source ~/.MyShellEnv/arch.sh
 
+source ~/.MyShellEnv/debian.sh
