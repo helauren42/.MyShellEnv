@@ -5,7 +5,9 @@ ERROR_REQUIRES_ARG="Error: requires an argument"
 # WELCOME
 
 # PATHS
+
 export PATH="$PATH:~/Qt/Tools/QtCreator/bin"
+export PATH=$HOME/.local/bin:$PATH
 
 # docker
 
@@ -90,13 +92,12 @@ cdup() {
 
 # alias
 
-alias pymenv="python3 -m venv venv && touch requirments.txt"
-
+alias p="python3"
+alias pymenv="python3 -m venv venv"
 alias pyenv="source venv/bin/activate"
+alias pipr="pip install -r requirements.txt"
 
 alias rm="gio trash"
-
-alias p="python3"
 
 alias Obsidian="nohup ~/.local/bin/Obsidian-1.8.7.AppImage &"
 alias Joplin="nohup ~/.local/bin/Joplin-3.2.12.AppImage &"

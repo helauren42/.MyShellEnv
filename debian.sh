@@ -6,7 +6,6 @@ remove() {
 	sudo apt remove $@ -y
 }
 
-upgrade() {
-	sudo apt update -y apt upgrade -y
-}
+alias upgrade="sudo apt update -y apt upgrade -y"
+
 
