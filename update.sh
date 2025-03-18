@@ -31,63 +31,65 @@ alias grmc="git rm --cached"
 alias gitsubmoduleup="git submodule update --init --recursive"
 
 gt() {
-	if [ -z $1 ]; then
-		echo $ERROR_REQUIRES_ARG
-	else
-		ga . && gc "$1" && git push
-	fi
+  if [ -z $1 ]; then
+    echo $ERROR_REQUIRES_ARG
+  else
+    ga . && gc "$1" && git push
+  fi
 }
-
 
 # Command functions
 
 recpp() {
-	clear && c++ *.cpp && ./a.out
+  clear && c++ *.cpp && ./a.out
 }
 
 basegitignore() {
-	cp $HOME/.MyShellEnv/files/basegitignore ./.gitignore
+  cp $HOME/.MyShellEnv/files/basegitignore ./.gitignore
 }
 
-filelinesep(){
-	python3 $HOME/.MyShellEnv/scripts/file_line_sep.py $@
+basemakefile() {
+  cp $HOME/.MyShellEnv/files/basemakefile ./Makefile
 }
 
-builddojo(){
-	python3 $HOME/.MyShellEnv/scripts/build_dojo_dir.py $@
+filelinesep() {
+  python3 $HOME/.MyShellEnv/scripts/file_line_sep.py $@
 }
 
-processgrep(){
-	ps aux | grep $@ | grep -v "grep"
+builddojo() {
+  python3 $HOME/.MyShellEnv/scripts/build_dojo_dir.py $@
 }
 
-i2pstart(){
-	$HOME/.MyShellEnv/scripts/i2p_start.sh
+processgrep() {
+  ps aux | grep $@ | grep -v "grep"
+}
+
+i2pstart() {
+  $HOME/.MyShellEnv/scripts/i2p_start.sh
 }
 
 stderrnull() {
-	"$@" 2>/dev/null
+  "$@" 2>/dev/null
 }
 
 stdoutnull() {
-	"$@" 1>/dev/null
+  "$@" 1>/dev/null
 }
 
 outnull() {
-	"$@" 2>/dev/null 1>/dev/null
+  "$@" 2>/dev/null 1>/dev/null
 }
 
 touchx() {
-	touch "$@" && chmod u+x "$@"
+  touch "$@" && chmod u+x "$@"
 }
 
 cdup() {
-	parent=""
-	for ((i=1; i<=$1; i++));
-	do
-		parent+="../"
-	done;
-	cd "$parent"
+  parent=""
+  for ((i = 1; i <= $1; i++)); do
+    parent+="../"
+  done
+  cd "$parent"
 }
 
 # alias
@@ -105,7 +107,8 @@ alias Joplin="nohup ~/.local/bin/Joplin-3.2.12.AppImage &"
 alias sozsh="source ~/.zshrc"
 alias sobash="source ~/.bashrc"
 
-# current
+alias nv="nvim"
 
+# current
 
 source ~/.MyShellEnv/debian.sh
