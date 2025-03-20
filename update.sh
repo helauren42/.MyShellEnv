@@ -40,6 +40,14 @@ gt() {
 
 # Command functions
 
+detach() {
+	$@ &
+	disown
+}
+
+drawio() {
+	outnull detach ~/.local/drawio.AppImage
+}
 recpp() {
   clear && c++ *.cpp && ./a.out
 }
