@@ -102,6 +102,8 @@ cdup() {
 
 # alias
 
+alias mypyvenv="source ~/.MyShellEnv/pyvenv/venv/bin/activate"
+
 alias p="python3"
 alias pymenv="python3 -m venv venv"
 alias pyenv="source venv/bin/activate"
