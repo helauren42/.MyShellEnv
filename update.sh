@@ -31,14 +31,18 @@ alias grmc="git rm --cached"
 alias gitsubmoduleup="git submodule update --init --recursive"
 
 gt() {
-  if [ -z $1 ]; then
-    echo $ERROR_REQUIRES_ARG
-  else
-    ga . && gc "$1" && git push
-  fi
+	if [ -z $1 ]; then
+		echo $ERROR_REQUIRES_ARG
+	else
+		ga . && gc "$1" && git push
+	fi
 }
 
 # Command functions
+
+reindent() {
+	python3 $HOME/.MyShellEnv/scripts/reindent.py $@
+}
 
 detach() {
 	$@ &
@@ -49,55 +53,55 @@ drawio() {
 	outnull detach ~/.local/drawio.AppImage
 }
 recpp() {
-  clear && c++ *.cpp && ./a.out
+	clear && c++ *.cpp && ./a.out
 }
 
 basegitignore() {
-  cp $HOME/.MyShellEnv/files/basegitignore ./.gitignore
+	cp $HOME/.MyShellEnv/files/basegitignore ./.gitignore
 }
 
 basemakefile() {
-  cp $HOME/.MyShellEnv/files/basemakefile ./Makefile
+	cp $HOME/.MyShellEnv/files/basemakefile ./Makefile
 }
 
 filelinesep() {
-  python3 $HOME/.MyShellEnv/scripts/file_line_sep.py $@
+	python3 $HOME/.MyShellEnv/scripts/file_line_sep.py $@
 }
 
 builddojo() {
-  python3 $HOME/.MyShellEnv/scripts/build_dojo_dir.py $@
+	python3 $HOME/.MyShellEnv/scripts/build_dojo_dir.py $@
 }
 
 processgrep() {
-  ps aux | grep $@ | grep -v "grep"
+	ps aux | grep $@ | grep -v "grep"
 }
 
 i2pstart() {
-  $HOME/.MyShellEnv/scripts/i2p_start.sh
+	$HOME/.MyShellEnv/scripts/i2p_start.sh
 }
 
 stderrnull() {
-  "$@" 2>/dev/null
+	"$@" 2>/dev/null
 }
 
 stdoutnull() {
-  "$@" 1>/dev/null
+	"$@" 1>/dev/null
 }
 
 outnull() {
-  "$@" 2>/dev/null 1>/dev/null
+	"$@" 2>/dev/null 1>/dev/null
 }
 
 touchx() {
-  touch "$@" && chmod u+x "$@"
+	touch "$@" && chmod u+x "$@"
 }
 
 cdup() {
-  parent=""
-  for ((i = 1; i <= $1; i++)); do
-    parent+="../"
-  done
-  cd "$parent"
+	parent=""
+	for ((i = 1; i <= $1; i++)); do
+		parent+="../"
+	done
+	cd "$parent"
 }
 
 # alias
