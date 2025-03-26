@@ -1,0 +1,1 @@
+Due to the apt package manager not allowing me to install numerous packages through pip I've created this permanent python venv where I can install anything I need and that essentially replaces my system wide python environment.
