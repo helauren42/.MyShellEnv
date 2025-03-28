@@ -109,8 +109,8 @@ cdup() {
 alias mypyvenv="source ~/.MyShellEnv/pyvenv/venv/bin/activate"
 
 alias p="python3"
-alias pymenv="python3 -m venv venv"
-alias pyenv="source venv/bin/activate"
+alias pymvenv="python3 -m venv venv"
+alias pyvenv="source venv/bin/activate"
 alias pipr="pip install -r requirements.txt"
 
 alias rm="gio trash"
