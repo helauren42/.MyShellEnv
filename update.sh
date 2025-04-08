@@ -106,6 +106,8 @@ cdup() {
 
 # alias
 
+alias nv="nvim"
+
 alias mypyvenv="source ~/.MyShellEnv/pyvenv/venv/bin/activate"
 
 alias p="python3"
@@ -120,8 +122,6 @@ alias Joplin="nohup ~/.local/bin/Joplin-3.2.12.AppImage &"
 
 alias sozsh="source ~/.zshrc"
 alias sobash="source ~/.bashrc"
-
-alias nv="nvim"
 
 # current
 

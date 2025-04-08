@@ -24,7 +24,8 @@ class checkValid:
             error()
         if not (sys.argv[3].isdigit() and sys.argv[5].isdigit() and int(sys.argv[3]) > 0 and int(sys.argv[5]) > 0):
             error()
-        return True
+
+checkValid.validArgs();
 
 class replaceIndent:
     old_format = sys.argv[2]
