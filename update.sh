@@ -56,6 +56,10 @@ recpp() {
 	clear && c++ *.cpp && ./a.out
 }
 
+basereactnodeproject() {
+	cp -r $HOME/.MyShellEnv/files/basereactnode/ ./basereactnode
+}
+
 basegitignore() {
 	cp $HOME/.MyShellEnv/files/basegitignore ./.gitignore
 }
