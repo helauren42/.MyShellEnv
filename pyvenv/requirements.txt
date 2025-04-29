@@ -1,0 +1,17 @@
+requests
+fastapi
+uvicorn
+mariadb
+pyright
+pymysql
+pronouncing
+pydantic
+pydantic[email]
+pyright
+pylsp-mypy
+bs4
+apscheduler
+python-lsp-black
+python-lsp-server
+python-lsp-server[rope]
+mysql-connector-python
