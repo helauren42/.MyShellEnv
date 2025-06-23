@@ -15,3 +15,5 @@ python-lsp-black
 python-lsp-server
 python-lsp-server[rope]
 mysql-connector-python
+selenium
+webdriver_manager
