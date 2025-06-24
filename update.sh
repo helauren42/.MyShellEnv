@@ -16,6 +16,8 @@ alias dock_stop="docker stop $(docker ps -q)"
 
 # github
 
+alias gmainhead="git fetch origin && git reset --hard origin"
+
 alias gl="git log"
 alias gd="git diff"
 alias gs="git status"
