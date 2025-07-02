@@ -17,7 +17,7 @@ alias dock_stop="docker stop $(docker ps -q)"
 # hidden
 
 getsshvps() {
-  source $HOME/.MyShellEnv/hidden/ssh_vps.sh
+  source $HOME/.MyShellEnv/.hidden/ssh_vps.sh
 }
 #
 # github

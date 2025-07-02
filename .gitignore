@@ -10,4 +10,4 @@ TESTER
 .swp
 __pycache__
 .env
-hidden/
+.hidden/
