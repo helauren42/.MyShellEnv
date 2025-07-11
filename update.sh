@@ -132,3 +132,9 @@ alias sobash="source ~/.bashrc"
 # current
 
 source ~/.MyShellEnv/debian.sh
+
+
+### apps path
+
+alias waterfox="~/.local/apps/waterfox/waterfox"
+alias nvim="~/.local/apps/neovim/nvim.appimage"
