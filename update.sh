@@ -129,4 +129,3 @@ alias autoremove="sudo pacman -Rns $(pacman -Qtdq)"
 
 # current
 
-source ~/.MyShellEnv/debian.sh
