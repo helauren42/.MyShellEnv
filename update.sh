@@ -14,12 +14,6 @@ export PATH=$HOME/.local/bin:$PATH
 alias dock_prune="docker system prune -a"
 alias dock_stop="docker stop $(docker ps -q)"
 
-# hidden
-
-getsshvps() {
-  source $HOME/.MyShellEnv/.hidden/ssh_vps.sh
-}
-#
 # github
 
 alias gl="git log"
@@ -37,82 +31,80 @@ alias grmc="git rm --cached"
 alias gitsubmoduleup="git submodule update --init --recursive"
 
 gt() {
-  if [ -z $1 ]; then
-    echo $ERROR_REQUIRES_ARG
-  else
-    ga . && gc "$1" && git push
-  fi
+	if [ -z $1 ]; then
+		echo $ERROR_REQUIRES_ARG
+	else
+		ga . && gc "$1" && git push
+	fi
 }
 
 # Command functions
 
 reindent() {
-  python3 $HOME/.MyShellEnv/scripts/reindent.py $@
+	python3 $HOME/.MyShellEnv/scripts/reindent.py $@
 }
 
 detach() {
-  $@ &
-  disown
+	$@ &
+	disown
 }
 
 drawio() {
-  outnull detach ~/.local/drawio.AppImage
+	outnull detach ~/.local/drawio.AppImage
 }
 recpp() {
-  clear && c++ *.cpp && ./a.out
+	clear && c++ *.cpp && ./a.out
 }
 
 basereactnodeproject() {
-  cp -r $HOME/.MyShellEnv/files/basereactnode/ ./basereactnode
+	cp -r $HOME/.MyShellEnv/files/basereactnode/ ./basereactnode
 }
 
 basegitignore() {
-  cp $HOME/.MyShellEnv/files/basegitignore ./.gitignore
+	cp $HOME/.MyShellEnv/files/basegitignore ./.gitignore
 }
 
 basemakefile() {
-  cp $HOME/.MyShellEnv/files/basemakefile ./Makefile
+	cp $HOME/.MyShellEnv/files/basemakefile ./Makefile
 }
 
 matchCss() {
-  python3 $HOME/.MyShellEnv/scripts/matchCss.py $@
+	python3 $HOME/.MyShellEnv/scripts/matchCss.py $@
 }
 
 filelinesep() {
-  python3 $HOME/.MyShellEnv/scripts/file_line_sep.py $@
+	python3 $HOME/.MyShellEnv/scripts/file_line_sep.py $@
 }
 
 builddojo() {
-  python3 $HOME/.MyShellEnv/scripts/build_dojo_dir.py $@
+	python3 $HOME/.MyShellEnv/scripts/build_dojo_dir.py $@
 }
 
 processgrep() {
-  ps aux | grep $@ | grep -v "grep"
+	ps aux | grep $@ | grep -v "grep"
 }
 
 i2pstart() {
-  $HOME/.MyShellEnv/scripts/i2p_start.sh
+	$HOME/.MyShellEnv/scripts/i2p_start.sh
 }
 
 stderrnull() {
-  "$@" 2>/dev/null
+	"$@" 2>/dev/null
 }
 
 stdoutnull() {
-  "$@" 1>/dev/null
+	"$@" 1>/dev/null
 }
 
 outnull() {
-  "$@" 2>/dev/null 1>/dev/null
+	"$@" 2>/dev/null 1>/dev/null
 }
 
 touchx() {
-  touch "$@" && chmod u+x "$@"
+	touch "$@" && chmod u+x "$@"
 }
 
 # alias
-
-alias nv="nvim"
 
 alias mypyvenv="source ~/.MyShellEnv/pyvenv/venv/bin/activate"
 
@@ -129,12 +121,12 @@ alias Joplin="nohup ~/.local/bin/Joplin-3.2.12.AppImage &"
 alias sozsh="source ~/.zshrc"
 alias sobash="source ~/.bashrc"
 
+alias nv="nvim"
+
+# arch
+
+alias autoremove="sudo pacman -Rns $(pacman -Qtdq)"
+
 # current
 
 source ~/.MyShellEnv/debian.sh
-
-
-### apps path
-
-alias waterfox="~/.local/apps/waterfox/waterfox"
-alias nvim="~/.local/apps/neovim/nvim.appimage"
