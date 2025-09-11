@@ -8,6 +8,8 @@ ERROR_REQUIRES_ARG="Error: requires an argument"
 
 export PATH="$PATH:~/Qt/Tools/QtCreator/bin"
 export PATH=$HOME/.local/bin:$PATH
+#Golang
+export PATH=$PATH:$HOME/.local/opt/go/bin
 
 # docker
 
@@ -129,3 +131,4 @@ alias autoremove="sudo pacman -Rns $(pacman -Qtdq)"
 
 # current
 
+alias getsshvps="source ~/.MyShellEnv/.hidden/getsshvps.sh"
