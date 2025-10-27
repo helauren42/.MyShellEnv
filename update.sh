@@ -6,10 +6,16 @@ ERROR_REQUIRES_ARG="Error: requires an argument"
 
 # PATHS
 
-export PATH="$PATH:~/Qt/Tools/QtCreator/bin"
 export PATH=$HOME/.local/bin:$PATH
-#Golang
+export PATH="$PATH:~/Qt/Tools/QtCreator/bin"
 export PATH=$PATH:$HOME/.local/opt/go/bin
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools
+
+source /usr/share/nvm/init-nvm.sh
 
 # docker
 
@@ -132,3 +138,15 @@ alias autoremove="sudo pacman -Rns $(pacman -Qtdq)"
 # current
 
 alias getsshvps="source ~/.MyShellEnv/.hidden/getsshvps.sh"
+
+ssh_cs() {
+	eval "$(ssh-agent -s)"
+	ssh-add -D
+	ssh-add ~/.ssh/id_ed25519_climate_solutions
+}
+
+ssh_42() {
+	eval "$(ssh-agent -s)"
+	ssh-add -D
+	ssh-add ~/.ssh/id_ed25519
+}
