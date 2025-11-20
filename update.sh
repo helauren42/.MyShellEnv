@@ -15,7 +15,9 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools
 
-source /usr/share/nvm/init-nvm.sh
+# ENV
+
+export EDITOR=nvim
 
 # docker
 
@@ -130,6 +132,12 @@ alias sozsh="source ~/.zshrc"
 alias sobash="source ~/.bashrc"
 
 alias nv="nvim"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
 
 # arch
 

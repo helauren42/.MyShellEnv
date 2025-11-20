@@ -147,3 +147,9 @@ firebase_admin
 pandas
 graphene
 ariadne
+dotenv
+httpx
+psycopg[binary]
+bcrypt
+tb_rest_client
+redis[hiredis]
