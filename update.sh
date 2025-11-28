@@ -32,7 +32,7 @@ alias gs="git status"
 
 alias ga="git add"
 alias gc="git commit -m"
-alias gp="git push"
+alias gp='GIT_SSH_COMMAND="ssh -4" git push'
 
 alias gca="git commit --amend"
 
